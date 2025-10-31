@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Databrewery — Data team as a service</title>
-  <meta name="description" content="Databrewery: flexibel Data & Analytics team (training, datamodellen, dashboards). Strippenkaart / abonnement voor musea en organisaties." />
+  <meta name="description" content="Databrewery: flexibel Data & Analytics team. Ontsluiting van databronnen, datamodellen, dashboards, data science en trainingen." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     :root{
       --primary:#0f766e;
@@ -16,45 +17,64 @@
       font-family:'Roboto',sans-serif;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--surface);color:var(--on-surface);font-size:16px;line-height:1.5}
-    header{background-color:var(--primary);color:var(--on-primary);padding:40px 20px;text-align:center}
-    header h1{margin:0;font-size:2.4rem;font-weight:700}
-    header p{margin-top:10px;font-size:1.1rem;opacity:0.9}
+    body{margin:0;background:var(--surface);color:var(--on-surface);font-size:16px;line-height:1.5;transition:background 0.5s ease,color 0.5s ease}
+    header{
+      position:relative;
+      background:linear-gradient(rgba(15,118,110,0.7), rgba(15,118,110,0.7)), url('https://www.databrewery.nl/images/achtergrond.jpg') center/cover fixed no-repeat;
+      color:var(--on-primary);
+      padding:120px 20px;text-align:center;
+      background-attachment:fixed;
+    }
+    header::after{
+      content:'';
+      position:absolute;
+      top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.3);
+      z-index:0;
+    }
+    header h1, header p, header a{position:relative;z-index:1}
+    header h1{margin:0;font-size:2.6rem;font-weight:700}
+    header p{margin-top:15px;font-size:1.2rem;opacity:0.95;max-width:700px;margin-left:auto;margin-right:auto}
     main{max-width:1000px;margin:0 auto;padding:40px 20px}
     section{margin-bottom:60px}
     h2{font-size:1.8rem;font-weight:700;margin-bottom:20px;color:var(--primary)}
-    h3{font-size:1.2rem;margin-bottom:8px}
+    h3{font-size:1.2rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
     p.lead{color:#555}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:20px;transition:transform 0.2s ease}
-    .card:hover{transform:translateY(-3px)}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:20px;transition:transform 0.2s ease, box-shadow 0.3s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 4px 10px rgba(0,0,0,0.15)}
     .cta{display:inline-block;margin-top:20px;background:var(--primary);color:var(--on-primary);padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:500;transition:background 0.2s ease}
     .cta:hover{background:#0c5d57}
     footer{text-align:center;padding:20px;color:#777;border-top:1px solid var(--outline)}
+    ul{padding-left:18px}
   </style>
 </head>
 <body>
   <header>
     <h1>Databrewery — Jouw flexibele Data-team</h1>
-    <p>Wij leveren Data & Analytics expertise op afroep: trainingen, datamodellen, dashboards en onderhoud.</p>
+    <p>Wij ontsluiten, modelleren en visualiseren data zodat organisaties betere beslissingen kunnen nemen.</p>
     <a class="cta" href="#contact">Boek een kennismaking</a>
   </header>
 
   <main>
     <section id="propositie">
-      <h2>Wat we doen</h2>
+      <h2>Onze diensten</h2>
       <div class="grid">
         <div class="card">
-          <h3>Trainingen</h3>
-          <p class="lead">Op maat gemaakte trainingen voor teams: van data literacy tot hands-on tooling (Power BI, Python, SQL).</p>
+          <h3><i class="fa-solid fa-database"></i> Data Ontsluiting & Modellering</h3>
+          <p class="lead">Wij halen data uit verschillende bronnen (ERP, CRM, web, kassasystemen) en bouwen daar een robuust datamodel van dat geschikt is voor analyse, rapportage en data science.</p>
         </div>
         <div class="card">
-          <h3>Datamodellen</h3>
-          <p class="lead">Duidelijke, onderhoudbare modellen die aansluiten op jullie processen en systemen.</p>
+          <h3><i class="fa-solid fa-chart-line"></i> Dashboards & Rapportages</h3>
+          <p class="lead">Van Power BI tot maatwerk dashboards — wij vertalen complexe datasets naar heldere inzichten waarmee je beslissingen kunt onderbouwen.</p>
         </div>
         <div class="card">
-          <h3>Dashboards & Rapportage</h3>
-          <p class="lead">Stakeholder-driven dashboards met actionabele inzichten en heldere storylines.</p>
+          <h3><i class="fa-solid fa-robot"></i> Data Science & Advanced Analytics</h3>
+          <p class="lead">We ontwikkelen en implementeren voorspellende modellen en maken de resultaten inzichtelijk in dashboards of rapportages.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-chalkboard-teacher"></i> Trainingen & KPI Workshops</h3>
+          <p class="lead">We geven trainingen in data-visualisatie (Power BI, storytelling) en helpen management om strategische doelen te vertalen naar meetbare KPI’s.</p>
         </div>
       </div>
     </section>
@@ -74,15 +94,15 @@
       <p class="lead">Voor een museum leveren we een vaste jaarconstructie: dashboards, datacaptatie uit kassasystemen en trainingen voor curatoren en marketing.</p>
       <div class="grid">
         <div class="card">
-          <h3>Uitdaging</h3>
+          <h3><i class="fa-solid fa-triangle-exclamation"></i> Uitdaging</h3>
           <p>Versnipperde rapportage, geen structureel onderhoud of kennisborging.</p>
         </div>
         <div class="card">
-          <h3>Oplossing</h3>
+          <h3><i class="fa-solid fa-lightbulb"></i> Oplossing</h3>
           <p>Strippenkaart + kwartaalreview + backlogbeheer.</p>
         </div>
         <div class="card">
-          <h3>Resultaat</h3>
+          <h3><i class="fa-solid fa-gauge-high"></i> Resultaat</h3>
           <p>Snellere dashboards, betere datakwaliteit, tevreden stakeholders.</p>
         </div>
       </div>
@@ -92,7 +112,7 @@
       <h2>Voorstel (voorbeeld)</h2>
       <div class="grid">
         <div class="card">
-          <h3>Basis</h3>
+          <h3><i class="fa-solid fa-seedling"></i> Basis</h3>
           <p><strong>€6.000 / jaar</strong></p>
           <ul>
             <li>40 uren ontwikkeling/onderhoud</li>
@@ -101,7 +121,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Standaard</h3>
+          <h3><i class="fa-solid fa-layer-group"></i> Standaard</h3>
           <p><strong>€12.000 / jaar</strong></p>
           <ul>
             <li>100 uren</li>
@@ -110,7 +130,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Maatwerk</h3>
+          <h3><i class="fa-solid fa-cogs"></i> Maatwerk</h3>
           <p>Prijs op aanvraag — ideaal voor grotere projecten of integraties.</p>
         </div>
       </div>

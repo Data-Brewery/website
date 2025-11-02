@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <meta property="og:title" content="Databrewery – Uw flexibele Data & Analytics-afdeling" />
-  <meta property="og:description" content="De voordelen van een interne data-afdeling, zonder de vaste lasten. Wij werken binnen jouw infrastructuur, samen met jouw IT-afdeling." />
+  <meta property="og:description" content="De voordelen van een interne data-afdeling, zonder de vaste lasten. Wij werken binnen uw infrastructuur, samen met uw IT-afdeling." />
   <meta property="og:image" content="https://www.databrewery.nl/wp-content/uploads/2020/12/onsbedrijf.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.databrewery.nl" />
@@ -25,7 +25,7 @@
     body{margin:0;background:var(--surface);color:var(--on-surface);font-size:16px;line-height:1.5;transition:background 0.5s ease,color 0.5s ease}
     header{
       position:relative;
-      background:linear-gradient(rgba(15,118,110,0.5), rgba(15,118,110,0.7)), url('https://www.databrewery.nl/wp-content/uploads/2020/12/onsbedrijf.jpg') center/cover fixed no-repeat;
+      background:radial-gradient(at center center, rgba(21,50,67,0.5), rgba(26,108,122,0.7) ), url('https://www.databrewery.nl/wp-content/uploads/2020/12/onsbedrijf.jpg') center/cover fixed no-repeat; 
       color:var(--on-primary);
       padding:120px 20px;text-align:center;
       background-attachment:fixed;
@@ -42,7 +42,8 @@
     header p{margin-top:15px;font-size:1.2rem;opacity:0.95;max-width:700px;margin-left:auto;margin-right:auto}
     main{max-width:1000px;margin:0 auto;padding:40px 20px}
     section{margin-bottom:60px}
-    h2{font-size:1.8rem;font-weight:700;margin-bottom:20px;color:var(--on-primary)}
+    h2{font-size:1.8rem;font-weight:700;margin-bottom:20px;color:var(--on-surface)}
+    header h2{color:var(--on-primary)}
     h3{font-size:1.2rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
     p.lead{color:#555}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
@@ -58,9 +59,34 @@
   <header>
     <h1>Databrewery</h1>
     <h2>Uw flexibele Data & Analytics-afdeling</h2>
-    <p>De voordelen van een interne data-afdeling, zonder de vaste lasten. Wij werken binnen uw infrastructuur en samen met uw IT-afdeling, zodat u altijd volledige controle houdt over uw data en kennis.</p>
+    <p>De voordelen van een interne data-afdeling, zonder de vaste lasten!</p>
     <a class="cta" href="https://www.calendly.com/databrewery-info">Boek een kennismaking</a>
   </header>
+
+  <!-- Nieuwe sectie: Werkwijze -->
+  <section id="werkwijze" style="background:#f9fafb; padding:60px 20px;">
+    <div style="max-width:1000px; margin:0 auto; text-align:center;">
+      <h2>Zo werkt samenwerken met Databrewery</h2>
+      <p class="lead" style="max-width:800px; margin:0 auto 40px;">
+        U krijgt een klein, zeer ervaren Data & Analytics-team (Daan, Paul en Roy) dat alle rollen binnen één afdeling dekt: van data-engineering en modellering tot analyse en visualisatie.
+        Wij werken binnen uw infrastructuur en in nauw overleg met uw IT-afdeling, zodat data en kennis in uw organisatie blijven.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3><i class="fa-solid fa-people-group"></i> Eén team, drie specialisten</h3>
+          <p>Ons team combineert de kennis van een data-engineer, analist en visualisatiespecialist. U hoeft dus geen losse zzp’ers of bureaus te coördineren.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-network-wired"></i> Binnen uw infrastructuur</h3>
+          <p>Wij bouwen en onderhouden alles binnen uw eigen cloud- of bedrijfsomgeving. Geen externe omgevingen, geen datarisico’s — volledige controle bij u.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-handshake"></i> Samenwerking op maat</h3>
+          <p>We werken in overleg met uw teams en stemmen onze uren af op uw prioriteiten — van dashboards tot trainingen of data science-modellen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section id="propositie">
@@ -87,7 +113,7 @@
 
     <section id="aanpak">
       <h2>Onze aanpak</h2>
-      <p class="lead">Je krijgt een klein, ervaren team (Daan, Paul, Roy) dat als jouw externe data-afdeling werkt. We werken in transparante blokken (strippenkaart): je koopt uren per jaar en bepaalt zelf waar ze naartoe gaan.</p>
+      <p class="lead">U krijgt een klein, ervaren team (Daan, Paul, Roy) dat als uw externe data-afdeling werkt. We werken in transparante blokken (strippenkaart): u koopt uren per jaar en bepaalt zelf waar ze naartoe gaan.</p>
       <ul>
         <li>Jaarabonnement met een vast aantal uren</li>
         <li>Prioritering in overleg — training, ontwikkeling of onderhoud</li>
@@ -151,7 +177,8 @@
   </main>
 
   <footer>
-    <p>&copy; Databrewery — Daan, Paul & Roy</p>
+    <p>&copy; Databrewery — Daan, Paul & Roy<br>
+    KVK: 76975150 — BTW-ID: NL860859460B01</p>
   </footer>
 </body>
 </html>

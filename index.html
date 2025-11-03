@@ -25,7 +25,7 @@
     body{margin:0;background:var(--surface);color:var(--on-surface);font-size:16px;line-height:1.5;transition:background 0.5s ease,color 0.5s ease}
     header{
       position:relative;
-      background:radial-gradient(at center center, rgba(21,50,67,0.5), rgba(26,108,122,0.7) ), url('https://www.databrewery.nl/wp-content/uploads/2020/12/onsbedrijf.jpg') center/cover fixed no-repeat; 
+      background:radial-gradient(at center center, rgba(21,50,67,0.5), rgba(26,108,122,0.7) ), url('img/onsbedrijf.jpg') center/cover fixed no-repeat; 
       color:var(--on-primary);
       padding:120px 20px;text-align:center;
       background-attachment:fixed;
@@ -40,6 +40,7 @@
     header h1, header h2, header p, header a{position:relative;z-index:1}
     header h1{margin:0;font-size:2.6rem;font-weight:700}
     header p{margin-top:15px;font-size:1.2rem;opacity:0.95;max-width:700px;margin-left:auto;margin-right:auto}
+    header img{width: 200px;z-index: 1;position: relative;}
     main{max-width:1000px;margin:0 auto;padding:40px 20px}
     section{margin-bottom:60px}
     h2{font-size:1.8rem;font-weight:700;margin-bottom:20px;color:var(--on-surface)}
@@ -57,7 +58,8 @@
 </head>
 <body>
   <header>
-    <h1>Databrewery</h1>
+    <!-- <h1>Databrewery</h1> -->
+    <img src="img/logo_db_wit.png" />
     <h2>Uw flexibele Data & Analytics-afdeling</h2>
     <p>De voordelen van een interne data-afdeling, zonder de vaste lasten!</p>
     <a class="cta" href="https://www.calendly.com/databrewery-info">Boek een kennismaking</a>

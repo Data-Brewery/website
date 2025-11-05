@@ -56,102 +56,12 @@
     .cta:hover{background:#0c5d57}
     footer{text-align:center;padding:20px;color:#777;border-top:1px solid var(--outline)}
     ul{padding-left:18px}
-    /* NAVBAR */
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    }
-
-    .nav-logo img {
-    width: 150px;
-    display: block;
-    }
-
-    .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    }
-
-    .nav-links a {
-    color: var(--on-primary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-    }
-
-    .nav-links a:hover {
-    opacity: 0.8;
-    }
-
-    .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--on-primary);
-    font-size: 1.6rem;
-    cursor: pointer;
-    }
-
-    /* CTA small variant for nav */
-    .cta.small {
-    padding: 8px 14px;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.15);
-    transition: background 0.3s ease;
-    }
-
-    .cta.small:hover {
-    background: rgba(255,255,255,0.25);
-    }
-
-    /* --- MOBILE MENU --- */
-    @media (max-width: 768px) {
-        .nav-links {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            background: rgba(0,0,0,0.85);
-            flex-direction: column;
-            gap: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            display: none;
-        }
-
-        .nav-links.open {
-            display: flex;
-        }
-
-        .nav-toggle {
-            display: block;
-        }
-    }
+   
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <!-- <a href="/" class="nav-logo">
-        <img src="img/logo_db_wit.png" alt="Databrewery logo">
-      </a> -->
-      <button class="nav-toggle" aria-label="menu openen">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <ul class="nav-links">
-        <li><a class="cta small" href="/website/">Home</a></li>
-        <li><a href="/website/plan-een-afspraak/">Afspraak inplannen</a></li>
-      </ul>
-    </nav>
+    
     <a href="/website/" style="text-decoration:none; border:none; outline:none;">
       <img src="img/logo_db_wit.png" />
     </a>

@@ -56,15 +56,108 @@
     .cta:hover{background:#0c5d57}
     footer{text-align:center;padding:20px;color:#777;border-top:1px solid var(--outline)}
     ul{padding-left:18px}
+    /* NAVBAR */
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    }
+
+    .nav-logo img {
+    width: 150px;
+    display: block;
+    }
+
+    .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    }
+
+    .nav-links a {
+    color: var(--on-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+    opacity: 0.8;
+    }
+
+    .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--on-primary);
+    font-size: 1.6rem;
+    cursor: pointer;
+    }
+
+    /* CTA small variant for nav */
+    .cta.small {
+    padding: 8px 14px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+    transition: background 0.3s ease;
+    }
+
+    .cta.small:hover {
+    background: rgba(255,255,255,0.25);
+    }
+
+    /* --- MOBILE MENU --- */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: rgba(0,0,0,0.85);
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .nav-toggle {
+            display: block;
+        }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- <h1>Databrewery</h1> -->
-    <img src="img/logo_db_wit.png" />
+    <nav class="navbar">
+      <!-- <a href="/" class="nav-logo">
+        <img src="img/logo_db_wit.png" alt="Databrewery logo">
+      </a> -->
+      <button class="nav-toggle" aria-label="menu openen">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a class="cta small" href="/">Home</a></li>
+        <li><a href="/plan-een-afspraak/">Plan afspraak</a></li>
+      </ul>
+    </nav>
+    <a href="/" style="text-decoration:none; border:none; outline:none;">
+      <img src="img/logo_db_wit.png" />
+    </a>
     <h2>Uw flexibele Data & Analytics-afdeling</h2>
     <p>De voordelen van een interne data-afdeling, zonder de vaste lasten!</p>
-    <a class="cta" href="https://outlook.office.com/book/Databrewery@databrewery.nl/"><i class="fa-solid fa-calendar-days"></i> Plan een kennismaking</a>
+    <a class="cta" target="_blank" href="https://outlook.office.com/book/Databrewery@databrewery.nl/"><i class="fa-solid fa-calendar-days"></i> Plan een kennismaking</a>
   </header>
 
   <!-- Nieuwe sectie: Werkwijze -->
@@ -76,12 +169,7 @@
         Wij werken binnen uw infrastructuur en in nauw overleg met uw IT-afdeling, zodat data en kennis in uw organisatie blijven. We werken in transparante blokken (strippenkaart): u koopt uren per jaar en bepaalt zelf waar ze naartoe gaan.
       </p>
 
-      <!-- <ul>
-        <li>Jaarabonnement met een vast aantal uren</li>
-        <li>Prioritering in overleg: training, ontwikkeling of onderhoud</li>
-        <li>Repository, documentatie en overdracht inbegrepen</li>
-        <li>We werken samen met uw interne organisatie</li>
-      </ul> -->
+
 
       <div class="grid">
         <div class="card">
@@ -125,24 +213,6 @@
 
     
 
-    <section id="case">
-      <h2>Voorbeeldcase: Museum</h2>
-      <p class="lead">Voor een museum leveren we een vaste jaarconstructie: dashboards, datacaptatie uit kassasystemen en trainingen voor curatoren en marketing.</p>
-      <div class="grid">
-        <div class="card">
-          <h3><i class="fa-solid fa-triangle-exclamation"></i> Uitdaging</h3>
-          <p>Versnipperde rapportage, geen structureel onderhoud of kennisborging.</p>
-        </div>
-        <div class="card">
-          <h3><i class="fa-solid fa-lightbulb"></i> Oplossing</h3>
-          <p>Strippenkaart + kwartaalreview + backlogbeheer.</p>
-        </div>
-        <div class="card">
-          <h3><i class="fa-solid fa-gauge-high"></i> Resultaat</h3>
-          <p>Snellere dashboards, betere datakwaliteit, tevreden stakeholders.</p>
-        </div>
-      </div>
-    </section>
 
     <section id="tarief">
       <h2>Kies uw pakket</h2>
@@ -152,8 +222,8 @@
           <p><strong>€6.000 / jaar</strong></p>
           <ul>
             <li>4 uur per maand</li>
-            <li>..</li>
-            <li>..</li>
+            <li>Online ondersteuning</li>
+          
           </ul>
         </div>
         <div class="card">
@@ -161,13 +231,17 @@
           <p><strong>€18.000 / jaar</strong></p>
           <ul>
             <li>12 uur per maand</li>
-            <li>..</li>
-            <li>..</li>
+            <li>Samenwerkdag - per kwartaal - op locatie</li>
           </ul>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-cogs"></i> Maatwerk</h3>
-          <p>Prijs op aanvraag — ideaal voor grotere projecten of integraties.</p>
+          <h3><i class="fa-solid fa-cogs"></i> Premium</h3>
+          <p><strong>> €60.000 / jaar</strong></p>
+          <ul>
+            <li>> 40 uur per maand</li>
+            <li>Samenwerkdag - per maand - op locatie</li>
+           
+          </ul>
         </div>
       </div>
       <p class="lead" style="margin-top:12px">Alle prijzen zijn indicatief — we maken graag een offerte op basis van een kickoff-gesprek.</p>
@@ -176,7 +250,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>Interesse om samen te werken? Mail naar <a href="mailto:info@databrewery.nl">info@databrewery.nl</a> of plan direct een kennismaking.</p>
-      <a class="cta" href="https://outlook.office.com/book/Databrewery@databrewery.nl/"><i class="fa-solid fa-calendar-days"></i> Plan een kennismaking</a>
+      <a class="cta" target="_blank" href="https://outlook.office.com/book/Databrewery@databrewery.nl/"><i class="fa-solid fa-calendar-days"></i> Plan een kennismaking</a>
     </section>
   </main>
 
@@ -184,5 +258,14 @@
     <p>&copy; Databrewery — Daan, Paul & Roy<br>
     KVK: 76975150 — BTW-ID: NL860859460B01</p>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
